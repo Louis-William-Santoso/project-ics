@@ -1,0 +1,65 @@
+[gd_scene load_steps=11 format=3 uid="uid://bcmdfbvb5q1tt"]
+
+[ext_resource type="Texture2D" uid="uid://ccvbxtaiawdhk" path="res://asset/manuk_idle0000.png" id="1_8c1gv"]
+[ext_resource type="Script" path="res://src/little_jhonny.gd" id="1_jfdns"]
+[ext_resource type="Texture2D" uid="uid://ia0dusr3i4fx" path="res://asset/manuk_terbang0000.png" id="4_7qfd1"]
+[ext_resource type="Texture2D" uid="uid://bkk04hfv2o4g8" path="res://asset/manuk_terbang0003.png" id="5_frw0t"]
+[ext_resource type="Texture2D" uid="uid://mgfhxkst58k0" path="res://asset/manuk_terbang0002.png" id="5_hpsqf"]
+[ext_resource type="Texture2D" uid="uid://c8nyufwa6ecvc" path="res://asset/manuk_terbang0004.png" id="6_kbiio"]
+[ext_resource type="Texture2D" uid="uid://bfrq42p7g1gb5" path="res://asset/manuk_terbang0005.png" id="7_vjbeq"]
+[ext_resource type="Texture2D" uid="uid://cd32761wd4cdp" path="res://asset/manuk_terbang0006.png" id="8_bk1ak"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6k7t2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_8c1gv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hpsqf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7qfd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hpsqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_frw0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kbiio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vjbeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bk1ak")
+}],
+"loop": false,
+"name": &"lompat",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ibopr"]
+radius = 40.0
+height = 156.0
+
+[node name="littleJhonny" type="CharacterBody2D"]
+script = ExtResource("1_jfdns")
+
+[node name="Jhonny_lompat" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6k7t2")
+animation = &"lompat"
+autoplay = "idle"
+frame = 5
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(18, 0)
+shape = SubResource("CapsuleShape2D_ibopr")

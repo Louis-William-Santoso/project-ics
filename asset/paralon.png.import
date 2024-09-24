@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gail80pp0vg2"
-path="res://.godot/imported/manuk_terbang0001.png-74fe0541e0e1c67ead0d2af1948a6f88.ctex"
+uid="uid://ks0xdxe57556"
+path="res://.godot/imported/paralon.png-e5148050bfe116f5473d060994bbc9a3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/manuk_terbang0001.png"
-dest_files=["res://.godot/imported/manuk_terbang0001.png-74fe0541e0e1c67ead0d2af1948a6f88.ctex"]
+source_file="res://asset/paralon.png"
+dest_files=["res://.godot/imported/paralon.png-e5148050bfe116f5473d060994bbc9a3.ctex"]
 
 [params]
 

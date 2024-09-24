@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceyin6g3rimce"]
+
+[ext_resource type="PackedScene" uid="uid://bcmdfbvb5q1tt" path="res://tscn/little_jhonny.tscn" id="1_gyuea"]
+[ext_resource type="PackedScene" uid="uid://45ggw24gvt6x" path="res://tscn/paralon_spawner.tscn" id="3_aiws7"]
+[ext_resource type="Script" path="res://src/skor.gd" id="4_juv62"]
+
+[node name="Main" type="Node2D"]
+position = Vector2(-5, -5)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+process_callback = 0
+
+[node name="littleJhonny" parent="." instance=ExtResource("1_gyuea")]
+position = Vector2(-348, 3)
+scale = Vector2(0.5, 0.5)
+
+[node name="paralonSpawner" parent="." instance=ExtResource("3_aiws7")]
+position = Vector2(628, 6)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -538.0
+offset_top = -284.0
+offset_right = -415.0
+offset_bottom = -174.0
+script = ExtResource("4_juv62")
